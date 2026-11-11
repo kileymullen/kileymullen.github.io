@@ -1,5 +1,5 @@
 (()=>{
-const allowed=new Set(['london','sydney','florence','nice','verbier','sicily','lanzarote','avalon','charleston','san-diego','copenhagen','philadelphia','new-york-city','vienna','paris','santorini']);
+const allowed=new Set(['london','sydney','florence','nice','verbier','sicily','lanzarote','avalon','charleston','san-diego','copenhagen','philadelphia','new-york-city','vienna','paris','santorini','dublin']);
 if(!p||!allowed.has(p.slug))return;
 const host=document.getElementById('trip-gallery');host.textContent='Loading my travel photos…';
 fetch('collages/'+p.slug+'.json', { cache: 'no-store' }).then(r=>{if(!r.ok)throw Error('Gallery unavailable');return r.json()}).then(entry=>{
