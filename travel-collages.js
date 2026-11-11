@@ -2,7 +2,7 @@
 const allowed=new Set(['london','sydney','florence','nice','verbier','sicily','lanzarote','avalon','charleston','san-diego']);
 if(!p||!allowed.has(p.slug))return;
 const host=document.getElementById('trip-gallery');host.textContent='Loading my travel photos…';
-fetch('collages/'+p.slug+'.json').then(r=>{if(!r.ok)throw Error('Gallery unavailable');return r.json()}).then(entry=>{
+fetch('collages/'+p.slug+'.json', { cache: 'no-store' }).then(r=>{if(!r.ok)throw Error('Gallery unavailable');return r.json()}).then(entry=>{
 host.replaceChildren();const collage=document.createElement('div');collage.className='travel-collage';
 const dialog=document.createElement('dialog');dialog.className='photo-lightbox';dialog.setAttribute('aria-label',entry.label+' photo viewer');
 const close=document.createElement('button');close.className='lightbox-close';close.type='button';close.textContent='Close ×';close.setAttribute('aria-label','Close photo viewer');
