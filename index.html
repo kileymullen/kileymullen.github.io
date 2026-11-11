@@ -54,6 +54,37 @@ main>section:nth-of-type(even){background-color:#f1f4f8}
 #contact .eyebrow{color:#fff9ef}
 @media(max-width:800px){main>section{padding-top:65px;padding-bottom:55px}main>section>.wrap>h2{font-size:34px}}
 main>section:before{display:none!important}.scallop-divider{display:block;width:100%;height:34px;padding:0;margin:0;line-height:0;background:#fcfaf5;position:relative;z-index:1}.scallop-divider svg{display:block;width:100%;height:34px}main>section{padding-top:65px}@media(max-width:800px){main>section{padding-top:48px}}.intro-photo.scalloped-portrait{padding:0;border:0;box-shadow:none;background:transparent;transform:rotate(1deg)}.scalloped-portrait svg{display:block;width:100%;height:auto;overflow:visible}.scallop-divider{height:34px;background:#fcfaf5}.scallop-divider svg{height:34px}@media(max-width:800px){.intro-photo.scalloped-portrait{max-width:390px;width:100%}}.personal-map-icon{background:transparent!important;border:0!important;font-size:14px;line-height:16px;text-align:center;filter:drop-shadow(0 1px 2px #ffffff)}.personal-map-icon span{display:block}
+.work-card.michelin-card {
+  background: #fbf6ea;
+  border-color: #bda580;
+}
+.michelin-card summary {
+  position: relative;
+  padding-inline-end: 92px;
+  background: linear-gradient(145deg, #253449, #111e30);
+}
+.michelin-card summary .eyebrow,
+.michelin-card summary .work-status { color: #f1d5a2; }
+.michelin-card .work-title { color: #fff8e9; }
+.michelin-card summary:focus-visible { outline-color: #8d632d; }
+.michelin-card .michelin-emblem {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 20px;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid #c5a576;
+  outline: 1px solid #c5a576;
+  outline-offset: -6px;
+  border-radius: 50%;
+  color: #f1d5a2;
+  font: 25px/1 Georgia, serif;
+}
+.michelin-card .work-content { border-color: #d7c5a6; }
+.michelin-card .work-content dd { color: #4b5260; }
 .work-card.loveshack-card {
   background: linear-gradient(145deg, #fff7f9, #f8e4ed);
   border-color: #d9a0b7;
@@ -93,8 +124,9 @@ main>section:before{display:none!important}.scallop-divider{display:block;width:
     <p><a href="https://www.wsj.com/style/fashion/love-shack-fancy-pink-rebecca-hessel-cohen-b610ab07">Read the Wall Street Journal article that quotes me ↗</a></p>
   </div>
 </details>
-<details id="michelin-air" class="work-card">
+<details id="michelin-air" class="work-card michelin-card">
   <summary>
+    <span class="michelin-emblem" aria-hidden="true">✦</span>
     <span class="eyebrow">Consumer Behavior · Class project</span>
     <span class="work-title">Michelin Air</span>
     <span class="work-status">View project · Expand +</span>
